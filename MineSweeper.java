@@ -266,7 +266,7 @@ Mines are generated on Board using the GenerateMines() method in the program. Fi
    indexes in the array is less than or equal to the square root of its size, that indexes in the gameBoard[][] array
    will be assigned with the mines ‘B’. Otherwise, it will be a space ‘*’.
 
-5. The interesting thing I found analyzing the code is the recursive method. This recursive method reminds me of Depth
+The interesting thing I found analyzing the code is the recursive method. This recursive method reminds me of Depth
    First Search (DFS) algorithm that I used to know. The main idea here is to flood the board until there is nothing
    more to reach. I guess in this situation, assigning displayBoard[r + i][c + j] with space ‘ ‘ here also means to
    mark the index that the method has gone through in the board. Therefore, if the recursive method is called with the
