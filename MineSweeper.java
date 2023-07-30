@@ -246,22 +246,22 @@ public class MineSweeper {
 
 
 /*
-1. The constructor of the MineSweeper class requires rows and columns to be input. These rows and columns will define
+The constructor of the MineSweeper class requires rows and columns to be input. These rows and columns will define
    the limit size of the board. The class member Board, as well as gameBoard and displayBoard are created by 2D character
    array objects based on the given rows and columns.
 
-2. The exception handling is implemented in the PlayGame() method in the program. The first and priority exception,
+The exception handling is implemented in the PlayGame() method in the program. The first and priority exception,
    which is a pure MismatchExceptionError, checks if the entered values are not integer numbers. The second exception,
    which is the general Exception or can be implied as a logic error, checks if the entered value is not in the range
    of the length of the row and column of the Board. This exception has a man-made throwing statement. I guess the
    purpose is to prevent index out-of-bounds errors caused by accessing the space in the array that does not exist.
 
-3. There is one recursive method implemented in the ChangeBoard() method. The main base case of the method is when the
+There is one recursive method implemented in the ChangeBoard() method. The main base case of the method is when the
    displayBoard[r + i][c + j] is not an asterisk ‘*’ or when the gameBoard[r + i][c + j] is a bomb ‘B’. I assume that
    checking the borderline of the Board is also a base case because it will not recall the function once the position
    ([r + i][c + j]) is not in the range of the Board.
 
-4. Mines are generated on Board using the GenerateMines() method in the program. Firstly, each index of the Board[][]
+Mines are generated on Board using the GenerateMines() method in the program. Firstly, each index of the Board[][]
    array will be assigned a random number between 0 and its size “totalSpaces” using Random generator. If any value in
    indexes in the array is less than or equal to the square root of its size, that indexes in the gameBoard[][] array
    will be assigned with the mines ‘B’. Otherwise, it will be a space ‘*’.
